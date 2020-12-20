@@ -1,0 +1,18 @@
+UC7
+Name: Remove a unit.
+
+Description:  
+A user wants to remove a unit.
+
+Primary Actor: User
+
+Preconditions: None
+
+Main Scenario:
+
+User selects list units.
+System returns all units.
+User selects remove unit.
+System removes the unit.
+
+Postcondition: (Success guaranties) A unit is removed.

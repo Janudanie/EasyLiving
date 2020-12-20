@@ -1,0 +1,18 @@
+UC1
+Name: Add controller
+
+Description:  
+A user has to add a new controller to the system
+
+Primary Actor: User
+
+Preconditions: The controller is configured and started up
+
+Main Scenario:
+
+User selects add controller.
+System shows a add controller form.
+User fills out the form.
+System adds the controller.
+
+Postcondition: (Success guaranties) A new controller is added.

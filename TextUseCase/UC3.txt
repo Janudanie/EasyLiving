@@ -1,0 +1,18 @@
+UC3
+Name: Remove controller
+
+Description:  
+A user has to remove a controller from the system
+
+Primary Actor: User
+
+Preconditions: None
+
+Main Scenario:
+
+User select lists controllers.
+System returns all controllers.
+User selecects remove controller.
+System removes the controller.
+
+Postcondition: (Success guaranties) A controller is remove.

@@ -1,0 +1,16 @@
+UC2
+Name: List controllers
+
+Description:  
+A user wants a list of all controllers in the system.
+
+Primary Actor: User
+
+Preconditions: None
+
+Main Scenario:
+
+User select lists controllers.
+System returns all controllers.
+
+Postcondition: (Success guaranties) A complete list of all controllers are returned.

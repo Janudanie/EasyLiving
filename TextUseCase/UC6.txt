@@ -1,0 +1,22 @@
+UC6
+Name: Change unit.
+
+Description:  
+A user wants to change a unit.
+
+Primary Actor: User
+
+Preconditions: None
+
+Main Scenario:
+
+User selects list units.
+System returns all units.
+User selects change unit.
+System returns the new unit form already filled out with old values.
+User fills out the form.
+System returns all controllers.
+User selects controller to add unit to.
+System changes the unit in the system.
+
+Postcondition: (Success guaranties) A unit is changed.

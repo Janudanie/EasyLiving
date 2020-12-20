@@ -1,0 +1,20 @@
+UC4
+Name: Add unit.
+
+Description:  
+A user wants to add a new unit to the system.
+
+Primary Actor: User
+
+Preconditions: A new unit is physical connected to a Controller that is online.
+
+Main Scenario:
+
+User selects add unit.
+System returns add new unit form.
+User fills out form.
+System returns all controllers.
+User selects controller to add unit to.
+System adds the new unit to the system.
+
+Postcondition: (Success guaranties) A new unit is added.

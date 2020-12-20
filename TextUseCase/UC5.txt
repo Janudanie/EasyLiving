@@ -1,0 +1,16 @@
+UC5
+Name: List units.
+
+Description:  
+A user wants to see all units connected.
+
+Primary Actor: User
+
+Preconditions: None
+
+Main Scenario:
+
+User selects list units.
+System returns all units.
+
+Postcondition: (Success guaranties) A list of all units is returned.
