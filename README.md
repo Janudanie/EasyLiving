@@ -1,4 +1,5 @@
 ## Easy Living - A system integration exam project
+##### Made by Alex Langhoff aka Janudanie
 Easy Living is a Internet of Things project based on a microservice architekture.
 
 The finished result should be able to take alot of different sensor and do a task based on the readings from that sensor.
