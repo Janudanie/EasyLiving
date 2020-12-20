@@ -184,6 +184,8 @@ https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC7.png "Easy Living sequence UC 7")
 
 #### Overview of the architecture
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Architecture/Architecture.png "Easy Living architecture")
+
 
 #### process and thoughts
 
