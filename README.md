@@ -21,6 +21,15 @@ IoT devices running the same firmware, which was identified by their mac address
 ### Microservices - The new app
 Making as the new app will be made using the microservice arcitekture, it will consists of many, small app, each tending to a small portion of the combined software. The main benifit of this is that it gonna be easier to scale the individual microservice if it is becomming a bottle neck. Another advantage is that a single service can be easly updated.
 
+The app consists of the following microservices:
+
+* Rest Frontend - Handles Client request
+* Camunda Frontend - Handles Client request
+* CLI Frontend - Handles Client request
+* Backup service - Handles Frontend request, save the committed changes to the database
+* Configurator - Handles the configuring of the IoT devices
+* Logging service - Handles all logs
+
 
 #### Logical Data Model
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Logical%20Data%20Model/Logical%20Data%20Model.png "Easy Living logical data model")
@@ -187,8 +196,48 @@ https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Architecture/Architecture.png "Easy Living architecture")
 
 
-#### process and thoughts
+#### Technology choices
+Some of the technologies used in the project and why.
+
+##### MongoDB
+For chosing the database to be used, there where a few that came up. 
+
+Hbase:
+    Hbase was discarded because of you dont choose Hbase unless you have huge amounts of data. As there is not a huge data collection involved in this project, going with Hbase would not have been a viable choise.
+
+Postgresql:
+    Using PostgreSql for this project would have worked nicely if the data to be stored would have been converted, but other databases would be able to store the data without a major converting.
+
+Neo4J:
+    Neo4J is more of a graph database, would not have maded much sense. But would definitely make sense, if a future project would add a map of the area the system is installed in.
+
+MongoDb:
+    MongoDb was found to the best suited database. The reason for this choise was that MongoDb takes Json and store, and all the messages between systems are Json, it would easly store and retrieve these messages.
+
+##### Messages broker
+For chosing the message broker one criteria was used, which was easiest to integrate with MQTT that is used for the IoT network.
+
+There where two viable choices found, spend roughly 30 minutes on each, trying to figure out how easy MQTT would be.
+
+Kafka:
+    First started looking at Kafka, there seemed to be no internal mechanism to use MQTT. Searching on google turned up a few 3rd party software that would make a proxy between Kafka and MQTT. 30 minutes passed and the result, use a third party proxy, or make one myself(Might try and do that in another procject).
+
+RabbitMQ:
+    The first search lead to RabbitMQ's page, with a detailed guide on how to setup MQTT inside RabbitMQ as a plugin. Within the 30 minutes, RabbitMQ was up and running, and could veryfi it with Paho(a MQTT client).
+    Seeing how easy this was, RabbitMQ was choosen for this project
+
+
+#### Deployment
+As this system is gonna be used in my home, i had to have a development environment, that can later be the production environment. This rules out my computer as a local environment.
+
+
+The project is deployed on a QNAP TS 251+ that has the ability to deploy containers. 
+
 
 #### future work
+Add more Unit - some form of a doorbell would be proberbly be in the next major update
+Add a mobile as a virtuel controller that could give a sound when the doorbell is pressed.
+
+Move the system from a prototype to a real system.
 
 
