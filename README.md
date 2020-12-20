@@ -25,11 +25,24 @@ Making as the new app will be made using the microservice arcitekture, it will c
 The app consists of the following microservices:
 
 * Rest Frontend - Handles Client request
+        
+        This microservice adds a rest api that give the option to interact with the system
 * Camunda Frontend - Handles Client request
+
+        This give the ability to add a JSON string as a configuration change, this have to be approved before  camunda sends the change to the system
 * CLI Frontend - Handles Client request
+
+        This give a command line interface to interact with the system
 * Backup service - Handles Frontend request, save the committed changes to the database
+        
+        This takes the request from the frontends and process them, either saving or retriving from the database.
+        Send configuration changes to the Configurator to handle.
 * Configurator - Handles the configuring of the IoT devices
+
+        Get the configurations and pushes them out into the IoT network
 * Logging service - Handles all logs
+
+        Handles all the logs
 
 
 #### Logical Data Model
@@ -227,6 +240,8 @@ RabbitMQ:
     The first search lead to RabbitMQ's page, with a detailed guide on how to setup MQTT inside RabbitMQ as a plugin. Within the 30 minutes, RabbitMQ was up and running, and could veryfi it with Paho(a MQTT client).
     Seeing how easy this was, RabbitMQ was choosen for this project
 
+##### SpringBoot
+Our instructor has show us Springboot, to learn more about this, i have tried using springboot. A very powerfull framework to really speed up the process of making applications (Once you learn how to use it)
 
 #### Deployment
 As this system is gonna be used in my home, i had to have a development environment, that can later be the production environment. This rules out my computer as a local environment.
@@ -240,5 +255,3 @@ Add more Unit - some form of a doorbell would be proberbly be in the next major 
 Add a mobile as a virtuel controller that could give a sound when the doorbell is pressed.
 
 Move the system from a prototype to a real system.
-
-
