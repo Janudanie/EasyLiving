@@ -26,8 +26,7 @@ Making as the new app will be made using the microservice arcitekture, it will c
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Logical%20Data%20Model/Logical%20Data%20Model.png "Easy Living logical data model")
 
 
-
-#### Use cases
+#### Use case
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/UseCase/Use%20cases.png "Easy Living use case")
 
 #### Text based Use Cases
@@ -169,6 +168,20 @@ Making as the new app will be made using the microservice arcitekture, it will c
 ---
 #### Sequence diagram.
 
+https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png "Easy Living sequence UC 1")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC2.png "Easy Living sequence UC 2")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC3.png "Easy Living sequence UC 3")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC4.png "Easy Living sequence UC 4")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC5.png "Easy Living sequence UC 5")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC6.png "Easy Living sequence UC 6")
+
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC7.png "Easy Living sequence UC 7")
 
 #### Overview of the architecture
 
