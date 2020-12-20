@@ -11,7 +11,7 @@ This will as stated a minimal prototype, so the first version will only support 
 
 
 #### Logical Data Model
-![alt text](logical%20Data%20Model/Logical%20Data%20Model.png "Easy Living logical data model")
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Logical%20Data%20Model/Logical%20Data%20Model.png "Easy Living logical data model")
 
 
 
