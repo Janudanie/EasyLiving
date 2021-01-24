@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1v0kd0b" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
+  <bpmn:process id="Process_1pzqvzz" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0jfw3fm</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_0ff4p2t" name="Delete a Unit">
+      <bpmn:incoming>Flow_0jfw3fm</bpmn:incoming>
+      <bpmn:outgoing>Flow_023bj00</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0jfw3fm" sourceRef="StartEvent_1" targetRef="Activity_0ff4p2t" />
+    <bpmn:task id="Activity_0pmjvqq" name="Check the database if the unit exists">
+      <bpmn:incoming>Flow_023bj00</bpmn:incoming>
+      <bpmn:outgoing>Flow_18x82ms</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_023bj00" sourceRef="Activity_0ff4p2t" targetRef="Activity_0pmjvqq" />
+    <bpmn:exclusiveGateway id="Gateway_1m9se39" name="Does unit exists?">
+      <bpmn:incoming>Flow_18x82ms</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ziawsl</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1dpjo8s</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_18x82ms" sourceRef="Activity_0pmjvqq" targetRef="Gateway_1m9se39" />
+    <bpmn:task id="Activity_10tefph" name="Delete the unit from the database">
+      <bpmn:incoming>Flow_0ziawsl</bpmn:incoming>
+      <bpmn:outgoing>Flow_0wrvwuu</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0ziawsl" name="yes" sourceRef="Gateway_1m9se39" targetRef="Activity_10tefph" />
+    <bpmn:endEvent id="Event_09kyac2" name="Unit is deleted">
+      <bpmn:incoming>Flow_0wrvwuu</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0wrvwuu" sourceRef="Activity_10tefph" targetRef="Event_09kyac2" />
+    <bpmn:endEvent id="Event_1uhvcp1" name="No unit to delete">
+      <bpmn:incoming>Flow_1dpjo8s</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1dpjo8s" name="No" sourceRef="Gateway_1m9se39" targetRef="Event_1uhvcp1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1pzqvzz">
+      <bpmndi:BPMNEdge id="Flow_0jfw3fm_di" bpmnElement="Flow_0jfw3fm">
+        <di:waypoint x="188" y="100" />
+        <di:waypoint x="240" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_023bj00_di" bpmnElement="Flow_023bj00">
+        <di:waypoint x="340" y="100" />
+        <di:waypoint x="400" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18x82ms_di" bpmnElement="Flow_18x82ms">
+        <di:waypoint x="500" y="100" />
+        <di:waypoint x="565" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ziawsl_di" bpmnElement="Flow_0ziawsl">
+        <di:waypoint x="615" y="100" />
+        <di:waypoint x="680" y="100" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="639" y="82" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0wrvwuu_di" bpmnElement="Flow_0wrvwuu">
+        <di:waypoint x="780" y="100" />
+        <di:waypoint x="852" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dpjo8s_di" bpmnElement="Flow_1dpjo8s">
+        <di:waypoint x="590" y="125" />
+        <di:waypoint x="590" y="192" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="598" y="156" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ff4p2t_di" bpmnElement="Activity_0ff4p2t">
+        <dc:Bounds x="240" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pmjvqq_di" bpmnElement="Activity_0pmjvqq">
+        <dc:Bounds x="400" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1m9se39_di" bpmnElement="Gateway_1m9se39" isMarkerVisible="true">
+        <dc:Bounds x="565" y="75" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="548" y="51" width="84" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_10tefph_di" bpmnElement="Activity_10tefph">
+        <dc:Bounds x="680" y="60" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_09kyac2_di" bpmnElement="Event_09kyac2">
+        <dc:Bounds x="852" y="82" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="836" y="125" width="70" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1uhvcp1_di" bpmnElement="Event_1uhvcp1">
+        <dc:Bounds x="572" y="192" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="551" y="235" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
