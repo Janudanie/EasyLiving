@@ -23,6 +23,8 @@ A server, that handlede everything. It had every thing build up in Lists and had
 Part two:
 IoT devices running the same firmware, which was identified by their mac address. They had no logic themself, and only reacted to messages from the server mentioned in part 1.
 
+[The old NodeMCU](https://github.com/Janudanie/EasyLivingOldNodeMCU)
+
 ### Microservices - The new app
 Making as the new app will be made using the microservice arcitekture, it will consists of many, small app, each tending to a small portion of the combined software. The main benifit of this is that it gonna be easier to scale the individual microservice if it is becomming a bottle neck. Another advantage is that a single service can be easly updated.
 
