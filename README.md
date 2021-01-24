@@ -1,11 +1,11 @@
 ## Easy Living - A system integration exam project
 ##### Made by Alex Langhoff aka Janudanie
+
+### What is this project?
 Easy Living is a Internet of Things project based on a microservice architecture.
 
-The finished result should be able to take alot of different sensor and do a task based on the readings from that sensor.
-For an example, it could be a pir sensor that registeres movement and send a signal to a relay, that turns on the light in that area.
-
-This will be a prototype with a minimal working order.
+It lets the user set up different IoT devices that can control anything.
+In this first release it will have the ability to take signals from a PIR sensor and start a relay based on this.
 
 [A small video presentation of the project](https://www.youtube.com/watch?v=bzZf3gNJx3g)
 
@@ -33,9 +33,7 @@ The app consists of the following microservices:
 * Rest Frontend - Handles Client request
         
         This microservice adds a rest api that give the option to interact with the system
-* Camunda Frontend - Handles Client request
 
-        This give the ability to add a JSON string as a configuration change, this have to be approved before  camunda sends the change to the system
 * CLI Frontend - Handles Client request
 
         This give a command line interface to interact with the system
@@ -255,6 +253,19 @@ As this system is gonna be used in my home, i had to have a development environm
 
 The project is deployed on a QNAP TS 251+ that has the ability to deploy containers. 
 
+#### Links to the Codebases
+
+##### Microservices
+[Backup](https://github.com/Janudanie/EasyLivingBackup)
+[Logger](https://github.com/Janudanie/EasyLivingLogger)
+[Configurator](https://github.com/Janudanie/EasyLivingLogger)
+
+##### Frontends
+[CLI-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
+[REST-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
+
+##### Contract
+[Easy Living DTO](https://github.com/Janudanie/EasyLivingDTO)
 
 #### future work
 Add more Unit - some form of a doorbell would be proberbly be in the next major update
