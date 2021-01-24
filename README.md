@@ -52,6 +52,7 @@ The app consists of the following:
 
 #### Business Process Model and Notation
 There are a few business processes in the program. The model is the same for every sensor or relay, so only one business process is made for all the different units.
+This project in itself will be able to let a user create their own business process models and can automate those processes.
 
 ##### BPMN for creating a new unit
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/BPMN/Create%20a%20new%20unit.png "Create a new unit")
@@ -109,11 +110,14 @@ The project is deployed on a QNAP TS 251+ that has the ability to deploy contain
 
 ##### Microservices
 [Backup](https://github.com/Janudanie/EasyLivingBackup)
+
 [Logger](https://github.com/Janudanie/EasyLivingLogger)
+
 [Configurator](https://github.com/Janudanie/EasyLivingLogger)
 
 ##### Frontends
 [CLI-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
+
 [REST-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
 
 ##### Contract
