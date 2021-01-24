@@ -28,7 +28,7 @@ IoT devices running the same firmware, which was identified by their mac address
 ### Microservices - The new app
 Making as the new app will be made using the microservice arcitekture, it will consists of many, small app, each tending to a small portion of the combined software. The main benifit of this is that it gonna be easier to scale the individual microservice if it is becomming a bottle neck. Another advantage is that a single service can be easly updated.
 
-The app consists of the following microservices:
+The app consists of the following:
 
 * Rest Frontend - Handles Client request
         
@@ -47,175 +47,27 @@ The app consists of the following microservices:
 * Logging service - Handles all logs
 
         Handles all the logs
+* DTO
+        A contract containing the object used in the system, so all components of the system has the same objects.
+
+#### Business Process Model and Notation
+There are a few business processes in the program. The model is the same for every sensor or relay, so only one business process is made for all the different units.
+
+##### BPMN for creating a new unit
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/BPMN/Create%20a%20new%20unit.png "Create a new unit")
 
 
-#### Logical Data Model
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Logical%20Data%20Model/Logical%20Data%20Model.png "Easy Living logical data model")
+##### BPMN for changing a new unit
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/BPMN/Update%20a%20unit.png "Update a unit")
+
+##### PBMN for deleting a unit
+![alt text](https://github.com/Janudanie/EasyLiving/blob/main/BPMN/Delete%20a%20Unit.png "Update a unit")
 
 
-#### Use case
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/UseCase/Use%20cases.png "Easy Living use case")
-
-#### Text based Use Cases
----
-    UC1
-    Name: Add controller
-
-    Description:  
-    A user has to add a new controller to the system
-
-    Primary Actor: User
-
-    Preconditions: The controller is configured and started up
-
-    Main Scenario:
-
-    User selects add controller.
-    System shows a add controller form.
-    User fills out the form.
-    System adds the controller.
-
-    Postcondition: (Success guaranties) A new controller is added.
----
-    UC2
-    Name: List controllers
-
-    Description:  
-    A user wants a list of all controllers in the system.
-
-    Primary Actor: User
-
-    Preconditions: None
-
-    Main Scenario:
-
-    User select lists controllers.
-    System returns all controllers.
-
-    Postcondition: (Success guaranties) A complete list of all controllers are returned.
----
-    UC3
-    Name: Remove controller
-
-    Description:  
-    A user has to remove a controller from the system
-
-    Primary Actor: User
-
-    Preconditions: None
-
-    Main Scenario:
-
-    User select lists controllers.
-    System returns all controllers.
-    User selecects remove controller.
-    System removes the controller.
-
-    Postcondition: (Success guaranties) A controller is remove.
----
-    UC4
-    Name: Add unit.
-
-    Description:  
-    A user wants to add a new unit to the system.
-
-    Primary Actor: User
-
-    Preconditions: A new unit is physical connected to a Controller that is online.
-
-    Main Scenario:
-
-    User selects add unit.
-    System returns add new unit form.
-    User fills out form.
-    System returns all controllers.
-    User selects controller to add unit to.
-    System adds the new unit to the system.
-
-    Postcondition: (Success guaranties) A new unit is added.
----
-    UC5
-    Name: List units.
-
-    Description:  
-    A user wants to see all units connected.
-
-    Primary Actor: User
-
-    Preconditions: None
-
-    Main Scenario:
-
-    User selects list units.
-    System returns all units.
-
-    Postcondition: (Success guaranties) A list of all units is returned.
----
-    UC6
-    Name: Change unit.
-
-    Description:  
-    A user wants to change a unit.
-
-    Primary Actor: User
-
-    Preconditions: None
-
-    Main Scenario:
-
-    User selects list units.
-    System returns all units.
-    User selects change unit.
-    System returns the new unit form already filled out with old values.
-    User fills out the form.
-    System returns all controllers.
-    User selects controller to add unit to.
-    System changes the unit in the system.
-
-    Postcondition: (Success guaranties) A unit is changed.
----
-    UC7
-    Name: Remove a unit.
-
-    Description:  
-    A user wants to remove a unit.
-
-    Primary Actor: User
-
-    Preconditions: None
-
-    Main Scenario:
-
-    User selects list units.
-    System returns all units.
-    User selects remove unit.
-    System removes the unit.
-
-    Postcondition: (Success guaranties) A unit is removed.
----
-#### Sequence diagram.
-
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png "Easy Living sequence UC 1")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC2.png "Easy Living sequence UC 2")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC3.png "Easy Living sequence UC 3")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC4.png "Easy Living sequence UC 4")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC5.png "Easy Living sequence UC 5")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC6.png "Easy Living sequence UC 6")
-
-![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC7.png "Easy Living sequence UC 7")
 
 #### Overview of the architecture
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Architecture/Architecture.png "Easy Living architecture")
 
-
-#### Technology choices
-Some of the technologies used in the project and why.
 
 ##### MongoDB
 For chosing the database to be used, there where a few that came up. 
