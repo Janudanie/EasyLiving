@@ -131,7 +131,4 @@ All the codebases are also stateless, and can be scaled horizontial the system b
 [Easy Living DTO](https://github.com/Janudanie/EasyLivingDTO)
 
 #### future work
-Add more Unit - some form of a doorbell would be proberbly be in the next major update
-Add a mobile as a virtuel controller that could give a sound when the doorbell is pressed.
-
-Move the system from a prototype to a real system.
+Next feature would be a moisture sensor added, so the system could also be used to ventilate a room if the moisture is too high
