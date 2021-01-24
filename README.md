@@ -1,11 +1,11 @@
 ## Easy Living - A system integration exam project
 ##### Made by Alex Langhoff aka Janudanie
-Easy Living is a Internet of Things project based on a microservice architekture.
+Easy Living is a Internet of Things project based on a microservice architecture.
 
 The finished result should be able to take alot of different sensor and do a task based on the readings from that sensor.
 For an example, it could be a pir sensor that registeres movement and send a signal to a relay, that turns on the light in that area.
 
-This will be a prototype with a minimal working order. But as i am gonna use this project on our old farm, this project is over time gonna be developed.
+This will be a prototype with a minimal working order.
 
 [A small video presentation of the project](https://www.youtube.com/watch?v=bzZf3gNJx3g)
 
@@ -17,6 +17,8 @@ This project is based on an old monolithic app with two parts.
 
 Part one:
 A server, that handlede everything. It had every thing build up in Lists and had every IoT device or unit loaded as a class, so it was not stateless and could not be scaled, it was also beginning to become too big and was starting to become very hard and time consuming to make any changes to it. If this server broke down, the service would stop.
+
+[The old App](https://github.com/Janudanie/EasyLivingOldMonolithic)
 
 Part two:
 IoT devices running the same firmware, which was identified by their mac address. They had no logic themself, and only reacted to messages from the server mentioned in part 1.
@@ -193,7 +195,7 @@ The app consists of the following microservices:
 ---
 #### Sequence diagram.
 
-https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png
+
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC1.png "Easy Living sequence UC 1")
 
 ![alt text](https://github.com/Janudanie/EasyLiving/blob/main/Sequence%20diagram/UC2.png "Easy Living sequence UC 2")
