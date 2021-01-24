@@ -48,7 +48,8 @@ The app consists of the following:
 
         Handles all the logs
 * DTO
-        A contract containing the object used in the system, so all components of the system has the same objects.
+
+        A contract containing the object used in the system, so all components of the system share the same objects, so all code bases need to include this package.
 
 #### Business Process Model and Notation
 There are a few business processes in the program. The model is the same for every sensor or relay, so only one business process is made for all the different units.
@@ -96,15 +97,21 @@ Kafka:
 RabbitMQ:
     The first search lead to RabbitMQ's page, with a detailed guide on how to setup MQTT inside RabbitMQ as a plugin. Within the 30 minutes, RabbitMQ was up and running, and could veryfi it with Paho(a MQTT client).
     Seeing how easy this was, RabbitMQ was choosen for this project
+    
+##### RabbitMQ
+There is a few patterns used to send messages over RabbitMQ.
+
+The following patterns are used:
+Message channel - where the message is just sent, but no confimation is sent back, for instance when sending a log to the logger.
+Request-Reply - Where the message needs a reply, for instance when creating a new unit, a fail or success is sent back.
 
 ##### SpringBoot
 Our instructor has show us Springboot, to learn more about this, i have tried using springboot. A very powerfull framework to really speed up the process of making applications (Once you learn how to use it)
 
 #### Deployment
-As this system is gonna be used in my home, i had to have a development environment, that can later be the production environment. This rules out my computer as a local environment.
-
-
-The project is deployed on a QNAP TS 251+ that has the ability to deploy containers. 
+The systems are made to be able to be deployed using a container system, like docker.
+So all the codebases are designed to include everything they need.
+All the codebases are also stateless, and can be scaled horizontial the system becomes too big, and have too many messages.
 
 #### Links to the Codebases
 
