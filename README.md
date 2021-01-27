@@ -125,7 +125,7 @@ All the codebases are also stateless, and can be scaled horizontial the system b
 ##### Frontends
 [CLI-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
 
-[REST-Frontend](https://github.com/Janudanie/EasyLivingCLIFrontend)
+[REST-Frontend](https://github.com/Janudanie/EasyLivingRestApi)
 
 ##### Contract
 [Easy Living DTO](https://github.com/Janudanie/EasyLivingDTO)
